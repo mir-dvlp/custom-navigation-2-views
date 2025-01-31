@@ -76,7 +76,7 @@ struct CustomNavigationView<MainView:View, NewView:View>: View {
         ZStack {
             // Затемнение
             Color.black
-                .opacity(isViewPresented ? min(0.4, 0.4 - (Double(offset.width / 1000))) : 0.0)
+                .opacity(isViewPresented ? 0.4 - (offset.width / UIScreen.main.bounds.width) * 0.4 : 0)
             
             if isViewPresented {
                 
